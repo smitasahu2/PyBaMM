@@ -45,7 +45,7 @@ N_cycles = 1
 #     "Charge at 1C for 60 minutes",
 #     ]#*5  # final capacity check
 # )
-
+print(pybamm.parameter_sets.get_docstring)
 standard_protocol = pybamm.Experiment(
     ["Discharge at 1C until 2.367V",
     "Charge at 1C until 4.212V",
