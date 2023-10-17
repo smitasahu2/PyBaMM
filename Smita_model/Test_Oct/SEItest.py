@@ -56,10 +56,11 @@ def run_SEI_test(SEI_test1, diffusivity):
                       ],
                       to_format="csv")
     ploot.myplot(sol_SEI)
+    
     print(param)
 
 SEI_test1_values = [1, 2, 3, 4]  # Add all the test cases you want to run
-diffusivity_values = [2.5e-21, 7.5e-21, 1.25e-20, 2.5e-22]  # Corresponding diffusivity values
+diffusivity_values = [2.5e-22, 2.5e-21, 7.5e-21, 1.25e-20]  # Corresponding diffusivity values
 
 for i, SEI_test1 in enumerate(SEI_test1_values):
     run_SEI_test(SEI_test1, diffusivity_values[i])

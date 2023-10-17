@@ -5,9 +5,8 @@ import pandas as pd
 import csv
 from numpy import savetxt
 # pybamm.set_logging_level("INFO")
-import pybamm
-import numpy as np
-import matplotlib.pyplot as plt
+import time as ttt  # Renamed "time" to "t" to avoid conflicts
+
 
 def myplot(sol_SEI):
     plt.figure(figsize=(12, 6))
@@ -55,6 +54,11 @@ def myplot(sol_SEI):
     plt.legend()
     plt.tight_layout()
     plt.show()
+    # Wait for 5 seconds before closing the plot
+    ttt.sleep(0.5)
+
+    # Close the plot
+    plt.close()
 
 
     # Plot 4: LAM vs. Throughput Capacity (if needed)
