@@ -6,7 +6,7 @@ import pybamm
 from .base_particle import BaseParticle
 
 
-class PolynomialProfile(BaseParticle):
+class PhasePolynomialProfile(BaseParticle):
     """
     Class for molar conservation in particles employing Fick's
     law, assuming a polynomial concentration profile in r, and allowing variation
