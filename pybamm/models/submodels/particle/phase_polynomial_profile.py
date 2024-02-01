@@ -32,7 +32,7 @@ class PhasePolynomialProfile(BaseParticle):
         if self.name == "Fickian diffusion":
             raise ValueError(
                 "Particle type must be 'uniform profile', "
-                "'quadratic profile' or 'quartic profile'"
+                "'phase averaged' or 'quartic profile'"
             )
 
         pybamm.citations.register("Subramanian2005")
@@ -123,7 +123,7 @@ class PhasePolynomialProfile(BaseParticle):
             # The concentration is uniform so the surface value is equal to
             # the average
             c_s_surf = c_s_rav
-        elif self.name in ["quadratic profile", "quartic profile"]:
+        elif self.name in ["phase averaged", "quartic profile"]:
             # We solve an equation for the surface concentration, so it is
             # a variable in the model
             c_s_surf = pybamm.Variable(
@@ -158,7 +158,7 @@ class PhasePolynomialProfile(BaseParticle):
             A = c_s_rav
             B = pybamm.FullBroadcast(0, f"{domain} electrode", "current collector")
             C = pybamm.FullBroadcast(0, f"{domain} electrode", "current collector")
-        elif self.name == "quadratic profile":
+        elif self.name == "phase averaged":
             # The concentration is given by c = A + B*r**2
             # eqs 11-12 in Subramanian2005
             A = 5 / 2 * c_s_rav - 3 / 2 * c_s_surf
@@ -222,7 +222,7 @@ class PhasePolynomialProfile(BaseParticle):
                     "tertiary": "current collector",
                 },
             )
-        elif self.name == "quadratic profile":
+        elif self.name == "phase averaged":
             # The flux may be computed directly from the polynomial for c
             N_s = -D_eff * 5 * (c_s_surf - c_s_rav) * r / R**2
         elif self.name == "quartic profile":
@@ -290,7 +290,7 @@ class PhasePolynomialProfile(BaseParticle):
         T_ref = self.param.T_ref
         D_c_max_scale = self.phase_param.D(c_max, T_ref) * c_max
 
-        if self.name == "quadratic profile":
+        if self.name == "phase averaged":
             # We solve an algebraic equation for the surface concentration
             self.algebraic = {
                 c_s_surf: (
@@ -330,7 +330,7 @@ class PhasePolynomialProfile(BaseParticle):
 
         self.initial_conditions = {c_s_rav: c_init}
 
-        if self.name in ["quadratic profile", "quartic profile"]:
+        if self.name in ["phase averaged", "quartic profile"]:
             # We also need to provide an initial condition (initial guess for the
             # algebraic solver) for the surface concentration
             c_s_surf = variables[f"{Domain} particle surface concentration [mol.m-3]"]

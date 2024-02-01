@@ -199,6 +199,7 @@ class TimeBuildModelParticle:
             "uniform profile",
             "quadratic profile",
             "quartic profile",
+            "phase averaged",
         ],
     )
 
@@ -218,6 +219,7 @@ class TimeSolveParticle(SolveModel):
             "uniform profile",
             "quadratic profile",
             "quartic profile",
+            "phase averaged",
         ],
         [pybamm.CasadiSolver, pybamm.IDAKLUSolver],
     )
