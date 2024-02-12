@@ -69,6 +69,12 @@ class DFN(BaseModel):
                     submod = pybamm.particle.MSMRDiffusion(
                         self.param, domain, self.options, phase=phase, x_average=False
                     )
+                elif particle in [
+                    "phase averaged",
+                ]:
+                    submod = pybamm.particle.PhasePolynomialProfile(
+                        self.param, domain, self.options, phase=phase
+                    )
                 self.submodels[f"{domain} {phase} particle"] = submod
                 self.submodels[
                     f"{domain} {phase} total particle concentration"

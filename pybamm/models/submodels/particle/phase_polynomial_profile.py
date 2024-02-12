@@ -35,7 +35,7 @@ class PhasePolynomialProfile(BaseParticle):
                 "'phase averaged' or 'quartic profile'"
             )
 
-        pybamm.citations.register("Subramanian2005")
+        # pybamm.citations.register("Subramanian2005")
 
     def get_fundamental_variables(self):
         domain, Domain = self.domain_Domain
@@ -123,34 +123,34 @@ class PhasePolynomialProfile(BaseParticle):
             # The concentration is uniform so the surface value is equal to
             # the average
             c_s_surf = c_s_rav
-        elif self.name in ["phase averaged", "quartic profile"]:
-            # We solve an equation for the surface concentration, so it is
-            # a variable in the model
-            c_s_surf = pybamm.Variable(
-                f"{Domain} particle surface concentration [mol.m-3]",
-                domain=f"{domain} electrode",
-                auxiliary_domains={"secondary": "current collector"},
-                bounds=(0, self.phase_param.c_max),
-                scale=self.phase_param.c_max,
-            )
-        if self.name == "quartic profile":
-            # For the fourth order polynomial approximation we also solve an
-            # equation for the average concentration gradient. Note: in the original
-            # paper this quantity is referred to as the flux, but here we make the
-            # distinction between the flux defined as N = -D*dc/dr and the
-            # concentration gradient q = dc/dr
-            q_s_rav = pybamm.Variable(
-                f"R-averaged {domain} particle concentration gradient [mol.m-4]",
-                domain=f"{domain} electrode",
-                auxiliary_domains={"secondary": "current collector"},
-                scale=self.phase_param.c_max / self.phase_param.R_typ,
-            )
-            variables.update(
-                {
-                    f"R-averaged {domain} particle "
-                    "concentration gradient [mol.m-4]": q_s_rav
-                }
-            )
+        # elif self.name in ["phase averaged", "quartic profile"]:
+        #     # We solve an equation for the surface concentration, so it is
+        #     # a variable in the model
+        #     c_s_surf = pybamm.Variable(
+        #         f"{Domain} particle surface concentration [mol.m-3]",
+        #         domain=f"{domain} electrode",
+        #         auxiliary_domains={"secondary": "current collector"},
+        #         bounds=(0, self.phase_param.c_max),
+        #         scale=self.phase_param.c_max,
+        #     )
+        # if self.name == "quartic profile":
+        #     # For the fourth order polynomial approximation we also solve an
+        #     # equation for the average concentration gradient. Note: in the original
+        #     # paper this quantity is referred to as the flux, but here we make the
+        #     # distinction between the flux defined as N = -D*dc/dr and the
+        #     # concentration gradient q = dc/dr
+        #     q_s_rav = pybamm.Variable(
+        #         f"R-averaged {domain} particle concentration gradient [mol.m-4]",
+        #         domain=f"{domain} electrode",
+        #         auxiliary_domains={"secondary": "current collector"},
+        #         scale=self.phase_param.c_max / self.phase_param.R_typ,
+        #     )
+        #     variables.update(
+        #         {
+        #             f"R-averaged {domain} particle "
+        #             "concentration gradient [mol.m-4]": q_s_rav
+        #         }
+        #     )
 
         # Set concentration depending on polynomial order
         if self.name == "uniform profile":
@@ -158,18 +158,18 @@ class PhasePolynomialProfile(BaseParticle):
             A = c_s_rav
             B = pybamm.FullBroadcast(0, f"{domain} electrode", "current collector")
             C = pybamm.FullBroadcast(0, f"{domain} electrode", "current collector")
-        elif self.name == "phase averaged":
+        elif self.name == "phase averaged":  # prev quadratic
             # The concentration is given by c = A + B*r**2
             # eqs 11-12 in Subramanian2005
             A = 5 / 2 * c_s_rav - 3 / 2 * c_s_surf
             B = 5 / 2 * (c_s_surf - c_s_rav)
             C = pybamm.FullBroadcast(0, f"{domain} electrode", "current collector")
-        elif self.name == "quartic profile":
-            # The concentration is given by c = A + B*r**2 + C*r**4
-            # eqs 24-26 in Subramanian2005
-            A = 39 / 4 * c_s_surf - 3 * q_s_rav * R - 35 / 4 * c_s_rav
-            B = -35 * c_s_surf + 10 * q_s_rav + 35 * c_s_rav
-            C = 105 / 4 * c_s_surf - 7 * q_s_rav * R - 105 / 4 * c_s_rav
+        # elif self.name == "quartic profile":
+        #     # The concentration is given by c = A + B*r**2 + C*r**4
+        #     # eqs 24-26 in Subramanian2005
+        #     A = 39 / 4 * c_s_surf - 3 * q_s_rav * R - 35 / 4 * c_s_rav
+        #     B = -35 * c_s_surf + 10 * q_s_rav + 35 * c_s_rav
+        #     C = 105 / 4 * c_s_surf - 7 * q_s_rav * R - 105 / 4 * c_s_rav
         A = pybamm.PrimaryBroadcast(A, [f"{domain} particle"])
         B = pybamm.PrimaryBroadcast(B, [f"{domain} particle"])
         C = pybamm.PrimaryBroadcast(C, [f"{domain} particle"])
@@ -225,15 +225,6 @@ class PhasePolynomialProfile(BaseParticle):
         elif self.name == "phase averaged":
             # The flux may be computed directly from the polynomial for c
             N_s = -D_eff * 5 * (c_s_surf - c_s_rav) * r / R**2
-        elif self.name == "quartic profile":
-            q_s_rav = variables[
-                f"R-averaged {domain} particle concentration gradient [mol.m-4]"
-            ]
-            # The flux may be computed directly from the polynomial for c
-            N_s = -D_eff * (
-                (-70 * c_s_surf + 20 * q_s_rav * R + 70 * c_s_rav) * r / R**2
-                + (105 * c_s_surf - 28 * q_s_rav * R - 105 * c_s_rav) * r**3 / R**4
-            )
 
         variables.update(self._get_standard_flux_variables(N_s))
 

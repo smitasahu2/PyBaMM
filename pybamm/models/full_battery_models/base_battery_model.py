@@ -282,6 +282,7 @@ class BatteryModelOptions(pybamm.FuzzyDict):
                 "quadratic profile",
                 "quartic profile",
                 "MSMR",
+                "phase averaged",
             ],
             "particle mechanics": ["none", "swelling only", "swelling and cracking"],
             "particle phases": ["1", "2"],
