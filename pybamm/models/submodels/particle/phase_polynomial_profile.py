@@ -123,16 +123,16 @@ class PhasePolynomialProfile(BaseParticle):
             # The concentration is uniform so the surface value is equal to
             # the average
             c_s_surf = c_s_rav
-        # elif self.name in ["phase averaged", "quartic profile"]:
-        #     # We solve an equation for the surface concentration, so it is
-        #     # a variable in the model
-        #     c_s_surf = pybamm.Variable(
-        #         f"{Domain} particle surface concentration [mol.m-3]",
-        #         domain=f"{domain} electrode",
-        #         auxiliary_domains={"secondary": "current collector"},
-        #         bounds=(0, self.phase_param.c_max),
-        #         scale=self.phase_param.c_max,
-        #     )
+        elif self.name == "phase averaged":
+            # We solve an equation for the surface concentration, so it is
+            # a variable in the model
+            c_s_surf = pybamm.Variable(
+                f"{Domain} particle surface concentration [mol.m-3]",
+                domain=f"{domain} electrode",
+                auxiliary_domains={"secondary": "current collector"},
+                bounds=(0, self.phase_param.c_max),
+                scale=self.phase_param.c_max,
+            )
         # if self.name == "quartic profile":
         #     # For the fourth order polynomial approximation we also solve an
         #     # equation for the average concentration gradient. Note: in the original
