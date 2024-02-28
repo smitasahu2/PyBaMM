@@ -117,7 +117,7 @@ class PhasePolynomialProfile(BaseParticle):
         domain, Domain = self.domain_Domain
 
         if self.size_distribution is False:
-            raise ValueError("Particles  must be different sizes")
+            pass
         else:
             # only uniform concentration implemented, no need to calculate D_eff
             pass
