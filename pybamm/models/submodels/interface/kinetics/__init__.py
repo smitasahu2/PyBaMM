@@ -6,6 +6,8 @@ from .marcus import Marcus, MarcusHushChidsey
 from .tafel import ForwardTafel  # , BackwardTafel
 from .no_reaction import NoReaction
 from .msmr_butler_volmer import MSMRButlerVolmer
+from .phase_butler_volmer import PhaseButlerVolmer
+
 from .diffusion_limited import DiffusionLimited
 from .inverse_kinetics.inverse_butler_volmer import (
     InverseButlerVolmer,

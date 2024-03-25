@@ -250,6 +250,8 @@ class BaseModel(pybamm.BaseBatteryModel):
                     ocp_model = ocp_submodels.CurrentSigmoidOpenCircuitPotential
                 elif ocp_option == "MSMR":
                     ocp_model = ocp_submodels.MSMROpenCircuitPotential
+                elif ocp_option == "phase change":
+                    ocp_model = ocp_submodels.PhaseSingleOpenCircuitPotential
                 self.submodels[f"{domain} {phase} open-circuit potential"] = ocp_model(
                     self.param, domain, reaction, self.options, phase
                 )

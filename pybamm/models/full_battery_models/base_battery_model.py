@@ -246,6 +246,7 @@ class BatteryModelOptions(pybamm.FuzzyDict):
                 "Marcus",
                 "Marcus-Hush-Chidsey",
                 "MSMR",
+                "phase change",
             ],
             "interface utilisation": ["full", "constant", "current-driven"],
             "lithium plating": [
@@ -263,7 +264,12 @@ class BatteryModelOptions(pybamm.FuzzyDict):
                 "stress and reaction-driven",
             ],
             "number of MSMR reactions": ["none"],
-            "open-circuit potential": ["single", "current sigmoid", "MSMR"],
+            "open-circuit potential": [
+                "single",
+                "current sigmoid",
+                "MSMR",
+                "phase change",
+            ],
             "operating mode": [
                 "current",
                 "voltage",
@@ -1111,6 +1117,8 @@ class BaseBatteryModel(pybamm.BaseModel):
             return pybamm.kinetics.MarcusHushChidsey
         elif options["intercalation kinetics"] == "MSMR":
             return pybamm.kinetics.MSMRButlerVolmer
+        elif options["intercalation kinetics"] == "phase change":
+            return pybamm.kinetics.PhaseButlerVolmer
 
     def get_inverse_intercalation_kinetics(self):
         if self.options["intercalation kinetics"] == "symmetric Butler-Volmer":

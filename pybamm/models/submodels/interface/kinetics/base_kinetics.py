@@ -95,7 +95,6 @@ class BaseKinetics(BaseInterface):
         else:
             j0 = self._get_exchange_current_density(variables)
 
-        # Get open-circuit potential variables and reaction overpotential
         if (
             domain_options["particle size"] == "distribution"
             and self.options.electrode_types[domain] == "porous"
@@ -149,6 +148,10 @@ class BaseKinetics(BaseInterface):
             j_tot.print_name = "j_tot"
 
             eta_sei = -j_tot * L_sei * R_sei
+        elif self.options["intercalation kinetics"] == "phase change":
+            eta_r = eta_r + ocp
+            phi_eq = self._get_phi_eq(variables)
+            eta_r += -phi_eq
         else:
             eta_sei = pybamm.Scalar(0)
         eta_r += eta_sei
@@ -195,6 +198,9 @@ class BaseKinetics(BaseInterface):
                 j_j = self._get_kinetics_by_reaction(j0_j, ne, eta_r, T, u, i)
                 variables.update(self._get_standard_icd_by_reaction_variables(j_j, i))
                 j += j_j
+        elif domain_options["intercalation kinetics"] == "phase change":
+            j0 = self._get_exchange_current_density_phase(variables)
+            j = self._get_kinetics_phase(self, j0, ne, eta_r, T, u)
         else:
             j = self._get_kinetics(j0, ne, eta_r, T, u)
 
