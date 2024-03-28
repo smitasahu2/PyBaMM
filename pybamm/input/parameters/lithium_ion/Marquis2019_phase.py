@@ -152,7 +152,7 @@ def lico2_diffusivity_Dualfoil1998(sto, T):
     return D_ref * arrhenius
 
 
-def LFP_ocp(T, c_s_rav, c_s_max):
+def LFP_ocp(sto):
     """
     Lithium Cobalt Oxide (LiCO2) Open-circuit Potential (OCP) as a a function of the
     stochiometry. The fit is taken from Dualfoil [1]. Dualfoil states that the data
@@ -173,23 +173,16 @@ def LFP_ocp(T, c_s_rav, c_s_max):
     om          : Regular solution parameter (om > 2 => phase change)
     """
     om = 3.5
-
+    T = 295
     # equation 13
-    mu_Li = (
-        pybamm.constants.R
-        * T
-        * (
-            pybamm.log(c_s_rav / c_s_max) / (1 - c_s_rav / c_s_max)
-            + om * (1 - 2 * c_s_rav / c_s_max)
-        )
-    )
+    mu_Li = pybamm.constants.R * T * (pybamm.log(sto) / (1 - sto) + om * (1 - 2 * sto))
     mu_Li_plus = 0.5
     mu_e_0 = 1
 
     return 1 / pybamm.constants.F * (mu_Li - mu_Li_plus - mu_e_0)  # equation 12
 
 
-def LFP_exch(c_e, c_s_rav, c_s_max, T):
+def LFP_exch(c_e, c_s_surf, c_s_max, T):
     """
     Exchange-current density for Butler-Volmer reactions between lico2 and LiPF6 in
     EC:DMC.
@@ -213,8 +206,8 @@ def LFP_exch(c_e, c_s_rav, c_s_max, T):
         pybamm.constants.R
         * T
         * (
-            pybamm.log(c_s_rav / c_s_max) / (1 - c_s_rav / c_s_max)
-            + om * (1 - 2 * c_s_rav / c_s_max)
+            pybamm.log(c_s_surf / c_s_max) / (1 - c_s_surf / c_s_max)
+            + om * (1 - 2 * c_s_surf / c_s_max)
         )
     )
 

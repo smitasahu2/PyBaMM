@@ -200,7 +200,7 @@ class BaseKinetics(BaseInterface):
                 j += j_j
         elif domain_options["intercalation kinetics"] == "phase change":
             j0 = self._get_exchange_current_density_phase(variables)
-            j = self._get_kinetics_phase(self, j0, ne, eta_r, T, u)
+            j = self._get_kinetics_phase(j0, ne, eta_r, T, u)
         else:
             j = self._get_kinetics(j0, ne, eta_r, T, u)
 

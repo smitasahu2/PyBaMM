@@ -34,7 +34,7 @@ class PhaseButlerVolmer(BaseKinetics):
         domain, Domain = self.domain_Domain
         T = variables[f"{Domain} electrode temperature [K]"]
         c_e = variables[f"{Domain} electrolyte concentration [mol.m-3]"]
-        c_s_rav = variables[f"R-averaged {Domain} particle concentration [mol.m-3]"]
+        c_s_rav = variables[f"R-averaged {domain} particle concentration [mol.m-3]"]
         c_s_max = 51217.9257309275
 
         k = 1.6e-7
@@ -53,7 +53,7 @@ class PhaseButlerVolmer(BaseKinetics):
     def _get_phi_eq(self, variables):
         domain, Domain = self.domain_Domain
         T = variables[f"{Domain} electrode temperature [K]"]
-        c_s_rav = variables[f"R-averaged {Domain} particle concentration [mol.m-3]"]
+        c_s_rav = variables[f"R-averaged {domain} particle concentration [mol.m-3]"]
         c_s_max = 51217.9257309275
         om = 3.5
 
