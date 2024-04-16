@@ -1,7 +1,7 @@
 import pybamm
 import numpy as np
 
-
+# This IS *about to be* adapted from Prada2013 and some home calculations for LFP_exch and LFP_phi_eq
 def graphite_mcmb2528_diffusivity_Dualfoil1998(sto, T):
     """
     Graphite MCMB 2528 diffusivity as a function of stochiometry, in this case the
