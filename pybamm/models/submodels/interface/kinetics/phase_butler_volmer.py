@@ -32,29 +32,30 @@ class PhaseButlerVolmer(BaseKinetics):
 
     def _get_exchange_current_density_phase(self, variables):
         domain, Domain = self.domain_Domain
-        T = variables[f"{Domain} electrode temperature [K]"]
-        c_e = variables[f"{Domain} electrolyte concentration [mol.m-3]"]
+        # T = variables[f"{Domain} electrode temperature [K]"]
+        # c_e = variables[f"{Domain} electrolyte concentration [mol.m-3]"]
         c_s_rav = variables[f"R-averaged {domain} particle concentration [mol.m-3]"]
-        c_s_max = 51217.9257309275
+        c_s_max = 22806.0
 
         k = 1.6e-7
-        om = 3.5
-        mu_Li = (
-            pybamm.constants.R
-            * T
-            * (
-                pybamm.log(c_s_rav / c_s_max) / (1 - c_s_rav / c_s_max)
-                + om * (1 - 2 * c_s_rav / c_s_max)
-            )
-        )
-        j0 = k * pybamm.exp(mu_Li / pybamm.constants.R / T / 2) * c_e**0.5
+        # om = 3.5
+        # mu_Li = (
+        #     pybamm.constants.R
+        #     * T
+        #     * (
+        #         pybamm.log((c_s_rav / c_s_max) / (1 - c_s_rav / c_s_max))
+        #         + om * (1 - 2 * c_s_rav / c_s_max)
+        #     )
+        # )
+        # j0 = k * pybamm.exp(mu_Li / pybamm.constants.R / T / 2) * c_e**0.5
+        j0 = k * (1 - c_s_rav / c_s_max) ** 0.5 * (c_s_rav / c_s_max) ** 0.5
         return j0
 
     def _get_phi_eq(self, variables):
         domain, Domain = self.domain_Domain
         T = variables[f"{Domain} electrode temperature [K]"]
         c_s_rav = variables[f"R-averaged {domain} particle concentration [mol.m-3]"]
-        c_s_max = 51217.9257309275
+        c_s_max = 22806.0
         om = 3.5
 
         # equation 13
@@ -62,12 +63,12 @@ class PhaseButlerVolmer(BaseKinetics):
             pybamm.constants.R
             * T
             * (
-                pybamm.log(c_s_rav / c_s_max) / (1 - c_s_rav / c_s_max)
+                pybamm.log((c_s_rav / c_s_max) / (1 - c_s_rav / c_s_max))
                 + om * (1 - 2 * c_s_rav / c_s_max)
             )
         )
-        mu_Li_plus = 0.5
-        mu_e_0 = 1
+        mu_Li_plus = -328873.86163228
+        mu_e_0 = 0
 
         phi_eq = 1 / pybamm.constants.F * (mu_Li - mu_Li_plus - mu_e_0)
         return phi_eq
