@@ -1,0 +1,5 @@
+if(EXISTS "/home/smita/workspace/Dandeliion-teams/dandeliion-core/build/dandeliion-core-test[1]_tests.cmake")
+  include("/home/smita/workspace/Dandeliion-teams/dandeliion-core/build/dandeliion-core-test[1]_tests.cmake")
+else()
+  add_test(dandeliion-core-test_NOT_BUILT dandeliion-core-test_NOT_BUILT)
+endif()

@@ -1,0 +1,1330 @@
+Start testing: Jun 26 22:37 BST
+----------------------------------------------------------
+1/39 Testing: FECVmethodTest.DefaultSimulation
+1/39 Test: FECVmethodTest.DefaultSimulation
+Command: "/home/smita/workspace/Dandeliion-teams/dandeliion-core/build/dandeliion-core-test" "--gtest_filter=FECVmethodTest.DefaultSimulation" "--gtest_also_run_disabled_tests"
+Directory: /home/smita/workspace/Dandeliion-teams/dandeliion-core/build
+"FECVmethodTest.DefaultSimulation" start time: Jun 26 22:37 BST
+Output:
+----------------------------------------------------------
+Running main() from /home/smita/workspace/Dandeliion-teams/dandeliion-core/googletest/googletest/src/gtest_main.cc
+Note: Google Test filter = FECVmethodTest.DefaultSimulation
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FECVmethodTest
+[ RUN      ] FECVmethodTest.DefaultSimulation
+/home/smita/workspace/Dandeliion-teams/dandeliion-core/src/models/1+1D_FE+CV_degradation/tests.cpp:32: Failure
+Expected equality of these values:
+  model.t.back()
+    Which is: 0.10000000000000001
+  t_ref
+    Which is: 3750
+The DAE solver stopped earlier
+[  FAILED  ] FECVmethodTest.DefaultSimulation (306 ms)
+[----------] 1 test from FECVmethodTest (306 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (306 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] FECVmethodTest.DefaultSimulation
+
+ 1 FAILED TEST
+<end of output>
+Test time =   0.32 sec
+----------------------------------------------------------
+Test Failed.
+"FECVmethodTest.DefaultSimulation" end time: Jun 26 22:37 BST
+"FECVmethodTest.DefaultSimulation" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/39 Testing: FECVmethodTest.ConvergenceLiquid
+2/39 Test: FECVmethodTest.ConvergenceLiquid
+Command: "/home/smita/workspace/Dandeliion-teams/dandeliion-core/build/dandeliion-core-test" "--gtest_filter=FECVmethodTest.ConvergenceLiquid" "--gtest_also_run_disabled_tests"
+Directory: /home/smita/workspace/Dandeliion-teams/dandeliion-core/build
+"FECVmethodTest.ConvergenceLiquid" start time: Jun 26 22:37 BST
+Output:
+----------------------------------------------------------
+Running main() from /home/smita/workspace/Dandeliion-teams/dandeliion-core/googletest/googletest/src/gtest_main.cc
+Note: Google Test filter = FECVmethodTest.ConvergenceLiquid
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FECVmethodTest
+[ RUN      ] FECVmethodTest.ConvergenceLiquid
+/home/smita/workspace/Dandeliion-teams/dandeliion-core/src/models/1+1D_FE+CV_degradation/tests.cpp:73: Failure
+Expected equality of these values:
+  model.t.back()
+    Which is: 0.10000000000000001
+  t_ref
+    Which is: 800
+The DAE solver stopped earlier
+[  FAILED  ] FECVmethodTest.ConvergenceLiquid (322 ms)
+[----------] 1 test from FECVmethodTest (322 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (322 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] FECVmethodTest.ConvergenceLiquid
+
+ 1 FAILED TEST
+<end of output>
+Test time =   0.33 sec
+----------------------------------------------------------
+Test Failed.
+"FECVmethodTest.ConvergenceLiquid" end time: Jun 26 22:37 BST
+"FECVmethodTest.ConvergenceLiquid" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/39 Testing: FECVmethodTest.ConvergenceSolid
+3/39 Test: FECVmethodTest.ConvergenceSolid
+Command: "/home/smita/workspace/Dandeliion-teams/dandeliion-core/build/dandeliion-core-test" "--gtest_filter=FECVmethodTest.ConvergenceSolid" "--gtest_also_run_disabled_tests"
+Directory: /home/smita/workspace/Dandeliion-teams/dandeliion-core/build
+"FECVmethodTest.ConvergenceSolid" start time: Jun 26 22:37 BST
+Output:
+----------------------------------------------------------
+Running main() from /home/smita/workspace/Dandeliion-teams/dandeliion-core/googletest/googletest/src/gtest_main.cc
+Note: Google Test filter = FECVmethodTest.ConvergenceSolid
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FECVmethodTest
+[ RUN      ] FECVmethodTest.ConvergenceSolid
+/home/smita/workspace/Dandeliion-teams/dandeliion-core/src/models/1+1D_FE+CV_degradation/tests.cpp:141: Failure
+Expected equality of these values:
+  model.t.back()
+    Which is: 0.10000000000000001
+  t_ref
+    Which is: 800
+The DAE solver stopped earlier
+[  FAILED  ] FECVmethodTest.ConvergenceSolid (269 ms)
+[----------] 1 test from FECVmethodTest (269 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (269 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] FECVmethodTest.ConvergenceSolid
+
+ 1 FAILED TEST
+<end of output>
+Test time =   0.27 sec
+----------------------------------------------------------
+Test Failed.
+"FECVmethodTest.ConvergenceSolid" end time: Jun 26 22:37 BST
+"FECVmethodTest.ConvergenceSolid" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/39 Testing: CurrentInterpolation.TestFile01
+4/39 Test: CurrentInterpolation.TestFile01
+Command: "/home/smita/workspace/Dandeliion-teams/dandeliion-core/build/dandeliion-core-test" "--gtest_filter=CurrentInterpolation.TestFile01" "--gtest_also_run_disabled_tests"
+Directory: /home/smita/workspace/Dandeliion-teams/dandeliion-core/build
+"CurrentInterpolation.TestFile01" start time: Jun 26 22:37 BST
+Output:
+----------------------------------------------------------
+Running main() from /home/smita/workspace/Dandeliion-teams/dandeliion-core/googletest/googletest/src/gtest_main.cc
+Note: Google Test filter = CurrentInterpolation.TestFile01
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from CurrentInterpolation
+[ RUN      ] CurrentInterpolation.TestFile01
+[       OK ] CurrentInterpolation.TestFile01 (0 ms)
+[----------] 1 test from CurrentInterpolation (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"CurrentInterpolation.TestFile01" end time: Jun 26 22:37 BST
+"CurrentInterpolation.TestFile01" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/39 Testing: CurrentInterpolation.TestFile02
+5/39 Test: CurrentInterpolation.TestFile02
+Command: "/home/smita/workspace/Dandeliion-teams/dandeliion-core/build/dandeliion-core-test" "--gtest_filter=CurrentInterpolation.TestFile02" "--gtest_also_run_disabled_tests"
+Directory: /home/smita/workspace/Dandeliion-teams/dandeliion-core/build
+"CurrentInterpolation.TestFile02" start time: Jun 26 22:37 BST
+Output:
+----------------------------------------------------------
+Running main() from /home/smita/workspace/Dandeliion-teams/dandeliion-core/googletest/googletest/src/gtest_main.cc
+Note: Google Test filter = CurrentInterpolation.TestFile02
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from CurrentInterpolation
+[ RUN      ] CurrentInterpolation.TestFile02
+[       OK ] CurrentInterpolation.TestFile02 (0 ms)
+[----------] 1 test from CurrentInterpolation (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"CurrentInterpolation.TestFile02" end time: Jun 26 22:37 BST
+"CurrentInterpolation.TestFile02" time elapsed: 00:00:00
+----------------------------------------------------------
+
+6/39 Testing: CurrentInterpolation.TestFile03
+6/39 Test: CurrentInterpolation.TestFile03
+Command: "/home/smita/workspace/Dandeliion-teams/dandeliion-core/build/dandeliion-core-test" "--gtest_filter=CurrentInterpolation.TestFile03" "--gtest_also_run_disabled_tests"
+Directory: /home/smita/workspace/Dandeliion-teams/dandeliion-core/build
+"CurrentInterpolation.TestFile03" start time: Jun 26 22:37 BST
+Output:
+----------------------------------------------------------
+Running main() from /home/smita/workspace/Dandeliion-teams/dandeliion-core/googletest/googletest/src/gtest_main.cc
+Note: Google Test filter = CurrentInterpolation.TestFile03
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from CurrentInterpolation
+[ RUN      ] CurrentInterpolation.TestFile03
+[       OK ] CurrentInterpolation.TestFile03 (0 ms)
+[----------] 1 test from CurrentInterpolation (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"CurrentInterpolation.TestFile03" end time: Jun 26 22:37 BST
+"CurrentInterpolation.TestFile03" time elapsed: 00:00:00
+----------------------------------------------------------
+
+7/39 Testing: EventTest.LowerVoltageCutOff
+7/39 Test: EventTest.LowerVoltageCutOff
+Command: "/home/smita/workspace/Dandeliion-teams/dandeliion-core/build/dandeliion-core-test" "--gtest_filter=EventTest.LowerVoltageCutOff" "--gtest_also_run_disabled_tests"
+Directory: /home/smita/workspace/Dandeliion-teams/dandeliion-core/build
+"EventTest.LowerVoltageCutOff" start time: Jun 26 22:37 BST
+Output:
+----------------------------------------------------------
+Running main() from /home/smita/workspace/Dandeliion-teams/dandeliion-core/googletest/googletest/src/gtest_main.cc
+Note: Google Test filter = EventTest.LowerVoltageCutOff
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from EventTest
+[ RUN      ] EventTest.LowerVoltageCutOff
+/home/smita/workspace/Dandeliion-teams/dandeliion-core/tests/test_events.cpp:32: Failure
+The difference between model.t.back() and 3600.0 / 5 is 719.89999999999998, which exceeds 20.0, where
+model.t.back() evaluates to 0.10000000000000001,
+3600.0 / 5 evaluates to 720, and
+20.0 evaluates to 20.
+The DAE solver stopped earlier
+[  FAILED  ] EventTest.LowerVoltageCutOff (362 ms)
+[----------] 1 test from EventTest (362 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (362 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] EventTest.LowerVoltageCutOff
+
+ 1 FAILED TEST
+<end of output>
+Test time =   0.37 sec
+----------------------------------------------------------
+Test Failed.
+"EventTest.LowerVoltageCutOff" end time: Jun 26 22:37 BST
+"EventTest.LowerVoltageCutOff" time elapsed: 00:00:00
+----------------------------------------------------------
+
+8/39 Testing: EventTest.UpperVoltageCutOff
+8/39 Test: EventTest.UpperVoltageCutOff
+Command: "/home/smita/workspace/Dandeliion-teams/dandeliion-core/build/dandeliion-core-test" "--gtest_filter=EventTest.UpperVoltageCutOff" "--gtest_also_run_disabled_tests"
+Directory: /home/smita/workspace/Dandeliion-teams/dandeliion-core/build
+"EventTest.UpperVoltageCutOff" start time: Jun 26 22:37 BST
+Output:
+----------------------------------------------------------
+Running main() from /home/smita/workspace/Dandeliion-teams/dandeliion-core/googletest/googletest/src/gtest_main.cc
+Note: Google Test filter = EventTest.UpperVoltageCutOff
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from EventTest
+[ RUN      ] EventTest.UpperVoltageCutOff
+/home/smita/workspace/Dandeliion-teams/dandeliion-core/tests/test_events.cpp:60: Failure
+Expected equality of these values:
+  model.sol.back()[model.ind.current_total]
+    Which is: -0.55983487442041557
+  -p.I0
+    Which is: -0.03125
+Total current does not match the reference solution, grid: (26x29+11+25x30) x 2
+[  FAILED  ] EventTest.UpperVoltageCutOff (240 ms)
+[----------] 1 test from EventTest (241 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (241 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] EventTest.UpperVoltageCutOff
+
+ 1 FAILED TEST
+<end of output>
+Test time =   0.25 sec
+----------------------------------------------------------
+Test Failed.
+"EventTest.UpperVoltageCutOff" end time: Jun 26 22:37 BST
+"EventTest.UpperVoltageCutOff" time elapsed: 00:00:00
+----------------------------------------------------------
+
+9/39 Testing: EventTest.FullDischarge
+9/39 Test: EventTest.FullDischarge
+Command: "/home/smita/workspace/Dandeliion-teams/dandeliion-core/build/dandeliion-core-test" "--gtest_filter=EventTest.FullDischarge" "--gtest_also_run_disabled_tests"
+Directory: /home/smita/workspace/Dandeliion-teams/dandeliion-core/build
+"EventTest.FullDischarge" start time: Jun 26 22:37 BST
+Output:
+----------------------------------------------------------
+Running main() from /home/smita/workspace/Dandeliion-teams/dandeliion-core/googletest/googletest/src/gtest_main.cc
+Note: Google Test filter = EventTest.FullDischarge
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from EventTest
+[ RUN      ] EventTest.FullDischarge
+/home/smita/workspace/Dandeliion-teams/dandeliion-core/tests/test_events.cpp:84: Failure
+The difference between model.t.back() and 3600.0 / 5 is 719.89999999999998, which exceeds 20.0, where
+model.t.back() evaluates to 0.10000000000000001,
+3600.0 / 5 evaluates to 720, and
+20.0 evaluates to 20.
+The DAE solver stopped earlier
+[  FAILED  ] EventTest.FullDischarge (211 ms)
+[----------] 1 test from EventTest (211 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (211 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] EventTest.FullDischarge
+
+ 1 FAILED TEST
+<end of output>
+Test time =   0.22 sec
+----------------------------------------------------------
+Test Failed.
+"EventTest.FullDischarge" end time: Jun 26 22:37 BST
+"EventTest.FullDischarge" time elapsed: 00:00:00
+----------------------------------------------------------
+
+10/39 Testing: EventTest.FullCharge
+10/39 Test: EventTest.FullCharge
+Command: "/home/smita/workspace/Dandeliion-teams/dandeliion-core/build/dandeliion-core-test" "--gtest_filter=EventTest.FullCharge" "--gtest_also_run_disabled_tests"
+Directory: /home/smita/workspace/Dandeliion-teams/dandeliion-core/build
+"EventTest.FullCharge" start time: Jun 26 22:37 BST
+Output:
+----------------------------------------------------------
+Running main() from /home/smita/workspace/Dandeliion-teams/dandeliion-core/googletest/googletest/src/gtest_main.cc
+Note: Google Test filter = EventTest.FullCharge
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from EventTest
+[ RUN      ] EventTest.FullCharge
+/home/smita/workspace/Dandeliion-teams/dandeliion-core/tests/test_events.cpp:113: Failure
+Expected equality of these values:
+  model.sol.back()[model.ind.current_total]
+    Which is: -3.1616781414392808e-08
+  -p.I0 * p.Ncells
+    Which is: -0.015625
+Total current does not match the reference solution, grid: (26x29+11+25x30) x 1
+[  FAILED  ] EventTest.FullCharge (6987 ms)
+[----------] 1 test from EventTest (6987 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (6987 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] EventTest.FullCharge
+
+ 1 FAILED TEST
+<end of output>
+Test time =   6.99 sec
+----------------------------------------------------------
+Test Failed.
+"EventTest.FullCharge" end time: Jun 26 22:37 BST
+"EventTest.FullCharge" time elapsed: 00:00:06
+----------------------------------------------------------
+
+11/39 Testing: GridTest.GridIntegrity
+11/39 Test: GridTest.GridIntegrity
+Command: "/home/smita/workspace/Dandeliion-teams/dandeliion-core/build/dandeliion-core-test" "--gtest_filter=GridTest.GridIntegrity" "--gtest_also_run_disabled_tests"
+Directory: /home/smita/workspace/Dandeliion-teams/dandeliion-core/build
+"GridTest.GridIntegrity" start time: Jun 26 22:37 BST
+Output:
+----------------------------------------------------------
+Running main() from /home/smita/workspace/Dandeliion-teams/dandeliion-core/googletest/googletest/src/gtest_main.cc
+Note: Google Test filter = GridTest.GridIntegrity
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from GridTest
+[ RUN      ] GridTest.GridIntegrity
+[       OK ] GridTest.GridIntegrity (107 ms)
+[----------] 1 test from GridTest (107 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (107 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.11 sec
+----------------------------------------------------------
+Test Passed.
+"GridTest.GridIntegrity" end time: Jun 26 22:37 BST
+"GridTest.GridIntegrity" time elapsed: 00:00:00
+----------------------------------------------------------
+
+12/39 Testing: InterpolateTableTest.ConstantValues
+12/39 Test: InterpolateTableTest.ConstantValues
+Command: "/home/smita/workspace/Dandeliion-teams/dandeliion-core/build/dandeliion-core-test" "--gtest_filter=InterpolateTableTest.ConstantValues" "--gtest_also_run_disabled_tests"
+Directory: /home/smita/workspace/Dandeliion-teams/dandeliion-core/build
+"InterpolateTableTest.ConstantValues" start time: Jun 26 22:37 BST
+Output:
+----------------------------------------------------------
+Running main() from /home/smita/workspace/Dandeliion-teams/dandeliion-core/googletest/googletest/src/gtest_main.cc
+Note: Google Test filter = InterpolateTableTest.ConstantValues
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from InterpolateTableTest
+[ RUN      ] InterpolateTableTest.ConstantValues
+[       OK ] InterpolateTableTest.ConstantValues (105 ms)
+[----------] 1 test from InterpolateTableTest (105 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (105 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.11 sec
+----------------------------------------------------------
+Test Passed.
+"InterpolateTableTest.ConstantValues" end time: Jun 26 22:37 BST
+"InterpolateTableTest.ConstantValues" time elapsed: 00:00:00
+----------------------------------------------------------
+
+13/39 Testing: InterpolateTableTest.DiffusivityAnode
+13/39 Test: InterpolateTableTest.DiffusivityAnode
+Command: "/home/smita/workspace/Dandeliion-teams/dandeliion-core/build/dandeliion-core-test" "--gtest_filter=InterpolateTableTest.DiffusivityAnode" "--gtest_also_run_disabled_tests"
+Directory: /home/smita/workspace/Dandeliion-teams/dandeliion-core/build
+"InterpolateTableTest.DiffusivityAnode" start time: Jun 26 22:37 BST
+Output:
+----------------------------------------------------------
+Running main() from /home/smita/workspace/Dandeliion-teams/dandeliion-core/googletest/googletest/src/gtest_main.cc
+Note: Google Test filter = InterpolateTableTest.DiffusivityAnode
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from InterpolateTableTest
+[ RUN      ] InterpolateTableTest.DiffusivityAnode
+[       OK ] InterpolateTableTest.DiffusivityAnode (105 ms)
+[----------] 1 test from InterpolateTableTest (105 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (105 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.11 sec
+----------------------------------------------------------
+Test Passed.
+"InterpolateTableTest.DiffusivityAnode" end time: Jun 26 22:37 BST
+"InterpolateTableTest.DiffusivityAnode" time elapsed: 00:00:00
+----------------------------------------------------------
+
+14/39 Testing: InterpolateTableTest.DiffusivityCathode
+14/39 Test: InterpolateTableTest.DiffusivityCathode
+Command: "/home/smita/workspace/Dandeliion-teams/dandeliion-core/build/dandeliion-core-test" "--gtest_filter=InterpolateTableTest.DiffusivityCathode" "--gtest_also_run_disabled_tests"
+Directory: /home/smita/workspace/Dandeliion-teams/dandeliion-core/build
+"InterpolateTableTest.DiffusivityCathode" start time: Jun 26 22:37 BST
+Output:
+----------------------------------------------------------
+Running main() from /home/smita/workspace/Dandeliion-teams/dandeliion-core/googletest/googletest/src/gtest_main.cc
+Note: Google Test filter = InterpolateTableTest.DiffusivityCathode
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from InterpolateTableTest
+[ RUN      ] InterpolateTableTest.DiffusivityCathode
+[       OK ] InterpolateTableTest.DiffusivityCathode (106 ms)
+[----------] 1 test from InterpolateTableTest (106 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (106 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.11 sec
+----------------------------------------------------------
+Test Passed.
+"InterpolateTableTest.DiffusivityCathode" end time: Jun 26 22:37 BST
+"InterpolateTableTest.DiffusivityCathode" time elapsed: 00:00:00
+----------------------------------------------------------
+
+15/39 Testing: InterpolateTableTest.DerivativeAnode
+15/39 Test: InterpolateTableTest.DerivativeAnode
+Command: "/home/smita/workspace/Dandeliion-teams/dandeliion-core/build/dandeliion-core-test" "--gtest_filter=InterpolateTableTest.DerivativeAnode" "--gtest_also_run_disabled_tests"
+Directory: /home/smita/workspace/Dandeliion-teams/dandeliion-core/build
+"InterpolateTableTest.DerivativeAnode" start time: Jun 26 22:37 BST
+Output:
+----------------------------------------------------------
+Running main() from /home/smita/workspace/Dandeliion-teams/dandeliion-core/googletest/googletest/src/gtest_main.cc
+Note: Google Test filter = InterpolateTableTest.DerivativeAnode
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from InterpolateTableTest
+[ RUN      ] InterpolateTableTest.DerivativeAnode
+[       OK ] InterpolateTableTest.DerivativeAnode (108 ms)
+[----------] 1 test from InterpolateTableTest (108 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (108 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.11 sec
+----------------------------------------------------------
+Test Passed.
+"InterpolateTableTest.DerivativeAnode" end time: Jun 26 22:37 BST
+"InterpolateTableTest.DerivativeAnode" time elapsed: 00:00:00
+----------------------------------------------------------
+
+16/39 Testing: InterpolateTableTest.DerivativeCathode
+16/39 Test: InterpolateTableTest.DerivativeCathode
+Command: "/home/smita/workspace/Dandeliion-teams/dandeliion-core/build/dandeliion-core-test" "--gtest_filter=InterpolateTableTest.DerivativeCathode" "--gtest_also_run_disabled_tests"
+Directory: /home/smita/workspace/Dandeliion-teams/dandeliion-core/build
+"InterpolateTableTest.DerivativeCathode" start time: Jun 26 22:37 BST
+Output:
+----------------------------------------------------------
+Running main() from /home/smita/workspace/Dandeliion-teams/dandeliion-core/googletest/googletest/src/gtest_main.cc
+Note: Google Test filter = InterpolateTableTest.DerivativeCathode
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from InterpolateTableTest
+[ RUN      ] InterpolateTableTest.DerivativeCathode
+[       OK ] InterpolateTableTest.DerivativeCathode (106 ms)
+[----------] 1 test from InterpolateTableTest (106 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (106 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.11 sec
+----------------------------------------------------------
+Test Passed.
+"InterpolateTableTest.DerivativeCathode" end time: Jun 26 22:37 BST
+"InterpolateTableTest.DerivativeCathode" time elapsed: 00:00:00
+----------------------------------------------------------
+
+17/39 Testing: JacobianTest.Initial
+17/39 Test: JacobianTest.Initial
+Command: "/home/smita/workspace/Dandeliion-teams/dandeliion-core/build/dandeliion-core-test" "--gtest_filter=JacobianTest.Initial" "--gtest_also_run_disabled_tests"
+Directory: /home/smita/workspace/Dandeliion-teams/dandeliion-core/build
+"JacobianTest.Initial" start time: Jun 26 22:37 BST
+Output:
+----------------------------------------------------------
+Running main() from /home/smita/workspace/Dandeliion-teams/dandeliion-core/googletest/googletest/src/gtest_main.cc
+Note: Google Test filter = JacobianTest.Initial
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from JacobianTest
+[ RUN      ] JacobianTest.Initial
+/home/smita/workspace/Dandeliion-teams/dandeliion-core/tests/test_jacobian.cpp:38: Failure
+Expected equality of these values:
+  model.test_jacobian(tol)
+    Which is: 26
+  0
+Analytic Jacobian at time t=0 does not match the reference Jacobian, tol = 0.0050000000000000001, grid: (10x10+5+10x10) x 3
+[  FAILED  ] JacobianTest.Initial (254 ms)
+[----------] 1 test from JacobianTest (254 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (254 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] JacobianTest.Initial
+
+ 1 FAILED TEST
+<end of output>
+Test time =   0.26 sec
+----------------------------------------------------------
+Test Failed.
+"JacobianTest.Initial" end time: Jun 26 22:37 BST
+"JacobianTest.Initial" time elapsed: 00:00:00
+----------------------------------------------------------
+
+18/39 Testing: JacobianTest.Simulation01
+18/39 Test: JacobianTest.Simulation01
+Command: "/home/smita/workspace/Dandeliion-teams/dandeliion-core/build/dandeliion-core-test" "--gtest_filter=JacobianTest.Simulation01" "--gtest_also_run_disabled_tests"
+Directory: /home/smita/workspace/Dandeliion-teams/dandeliion-core/build
+"JacobianTest.Simulation01" start time: Jun 26 22:37 BST
+Output:
+----------------------------------------------------------
+Running main() from /home/smita/workspace/Dandeliion-teams/dandeliion-core/googletest/googletest/src/gtest_main.cc
+Note: Google Test filter = JacobianTest.Simulation01
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from JacobianTest
+[ RUN      ] JacobianTest.Simulation01
+/home/smita/workspace/Dandeliion-teams/dandeliion-core/tests/test_jacobian.cpp:73: Failure
+Expected equality of these values:
+  model.t.back()
+    Which is: 0.10000000000000001
+  60.0
+    Which is: 60
+The DAE solver stopped earlier
+[  FAILED  ] JacobianTest.Simulation01 (166 ms)
+[----------] 1 test from JacobianTest (166 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (166 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] JacobianTest.Simulation01
+
+ 1 FAILED TEST
+<end of output>
+Test time =   0.17 sec
+----------------------------------------------------------
+Test Failed.
+"JacobianTest.Simulation01" end time: Jun 26 22:37 BST
+"JacobianTest.Simulation01" time elapsed: 00:00:00
+----------------------------------------------------------
+
+19/39 Testing: JacobianTest.Simulation02
+19/39 Test: JacobianTest.Simulation02
+Command: "/home/smita/workspace/Dandeliion-teams/dandeliion-core/build/dandeliion-core-test" "--gtest_filter=JacobianTest.Simulation02" "--gtest_also_run_disabled_tests"
+Directory: /home/smita/workspace/Dandeliion-teams/dandeliion-core/build
+"JacobianTest.Simulation02" start time: Jun 26 22:37 BST
+Output:
+----------------------------------------------------------
+Running main() from /home/smita/workspace/Dandeliion-teams/dandeliion-core/googletest/googletest/src/gtest_main.cc
+Note: Google Test filter = JacobianTest.Simulation02
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from JacobianTest
+[ RUN      ] JacobianTest.Simulation02
+/home/smita/workspace/Dandeliion-teams/dandeliion-core/tests/test_jacobian.cpp:97: Failure
+Expected equality of these values:
+  model.t.back()
+    Which is: 0.10000000000000001
+  60.0
+    Which is: 60
+The DAE solver stopped earlier
+[  FAILED  ] JacobianTest.Simulation02 (169 ms)
+[----------] 1 test from JacobianTest (169 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (169 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] JacobianTest.Simulation02
+
+ 1 FAILED TEST
+<end of output>
+Test time =   0.17 sec
+----------------------------------------------------------
+Test Failed.
+"JacobianTest.Simulation02" end time: Jun 26 22:37 BST
+"JacobianTest.Simulation02" time elapsed: 00:00:00
+----------------------------------------------------------
+
+20/39 Testing: JacobianTest.Simulation03
+20/39 Test: JacobianTest.Simulation03
+Command: "/home/smita/workspace/Dandeliion-teams/dandeliion-core/build/dandeliion-core-test" "--gtest_filter=JacobianTest.Simulation03" "--gtest_also_run_disabled_tests"
+Directory: /home/smita/workspace/Dandeliion-teams/dandeliion-core/build
+"JacobianTest.Simulation03" start time: Jun 26 22:37 BST
+Output:
+----------------------------------------------------------
+Running main() from /home/smita/workspace/Dandeliion-teams/dandeliion-core/googletest/googletest/src/gtest_main.cc
+Note: Google Test filter = JacobianTest.Simulation03
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from JacobianTest
+[ RUN      ] JacobianTest.Simulation03
+/home/smita/workspace/Dandeliion-teams/dandeliion-core/tests/test_jacobian.cpp:121: Failure
+Expected equality of these values:
+  model.t.back()
+    Which is: 0.10000000000000001
+  60.0
+    Which is: 60
+The DAE solver stopped earlier
+[  FAILED  ] JacobianTest.Simulation03 (205 ms)
+[----------] 1 test from JacobianTest (205 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (205 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] JacobianTest.Simulation03
+
+ 1 FAILED TEST
+<end of output>
+Test time =   0.21 sec
+----------------------------------------------------------
+Test Failed.
+"JacobianTest.Simulation03" end time: Jun 26 22:37 BST
+"JacobianTest.Simulation03" time elapsed: 00:00:00
+----------------------------------------------------------
+
+21/39 Testing: JacobianTest.Simulation04
+21/39 Test: JacobianTest.Simulation04
+Command: "/home/smita/workspace/Dandeliion-teams/dandeliion-core/build/dandeliion-core-test" "--gtest_filter=JacobianTest.Simulation04" "--gtest_also_run_disabled_tests"
+Directory: /home/smita/workspace/Dandeliion-teams/dandeliion-core/build
+"JacobianTest.Simulation04" start time: Jun 26 22:37 BST
+Output:
+----------------------------------------------------------
+Running main() from /home/smita/workspace/Dandeliion-teams/dandeliion-core/googletest/googletest/src/gtest_main.cc
+Note: Google Test filter = JacobianTest.Simulation04
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from JacobianTest
+[ RUN      ] JacobianTest.Simulation04
+/home/smita/workspace/Dandeliion-teams/dandeliion-core/tests/test_jacobian.cpp:145: Failure
+Expected equality of these values:
+  model.t.back()
+    Which is: 0.10000000000000001
+  60.0
+    Which is: 60
+The DAE solver stopped earlier
+[  FAILED  ] JacobianTest.Simulation04 (232 ms)
+[----------] 1 test from JacobianTest (232 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (232 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] JacobianTest.Simulation04
+
+ 1 FAILED TEST
+<end of output>
+Test time =   0.24 sec
+----------------------------------------------------------
+Test Failed.
+"JacobianTest.Simulation04" end time: Jun 26 22:37 BST
+"JacobianTest.Simulation04" time elapsed: 00:00:00
+----------------------------------------------------------
+
+22/39 Testing: JacobianTest.Simulation05
+22/39 Test: JacobianTest.Simulation05
+Command: "/home/smita/workspace/Dandeliion-teams/dandeliion-core/build/dandeliion-core-test" "--gtest_filter=JacobianTest.Simulation05" "--gtest_also_run_disabled_tests"
+Directory: /home/smita/workspace/Dandeliion-teams/dandeliion-core/build
+"JacobianTest.Simulation05" start time: Jun 26 22:37 BST
+Output:
+----------------------------------------------------------
+Running main() from /home/smita/workspace/Dandeliion-teams/dandeliion-core/googletest/googletest/src/gtest_main.cc
+Note: Google Test filter = JacobianTest.Simulation05
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from JacobianTest
+[ RUN      ] JacobianTest.Simulation05
+/home/smita/workspace/Dandeliion-teams/dandeliion-core/tests/test_jacobian.cpp:169: Failure
+Expected equality of these values:
+  model.t.back()
+    Which is: 0.10000000000000001
+  60.0
+    Which is: 60
+The DAE solver stopped earlier
+[  FAILED  ] JacobianTest.Simulation05 (241 ms)
+[----------] 1 test from JacobianTest (241 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (241 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] JacobianTest.Simulation05
+
+ 1 FAILED TEST
+<end of output>
+Test time =   0.25 sec
+----------------------------------------------------------
+Test Failed.
+"JacobianTest.Simulation05" end time: Jun 26 22:37 BST
+"JacobianTest.Simulation05" time elapsed: 00:00:00
+----------------------------------------------------------
+
+23/39 Testing: JacobianTest.Simulation06
+23/39 Test: JacobianTest.Simulation06
+Command: "/home/smita/workspace/Dandeliion-teams/dandeliion-core/build/dandeliion-core-test" "--gtest_filter=JacobianTest.Simulation06" "--gtest_also_run_disabled_tests"
+Directory: /home/smita/workspace/Dandeliion-teams/dandeliion-core/build
+"JacobianTest.Simulation06" start time: Jun 26 22:37 BST
+Output:
+----------------------------------------------------------
+Running main() from /home/smita/workspace/Dandeliion-teams/dandeliion-core/googletest/googletest/src/gtest_main.cc
+Note: Google Test filter = JacobianTest.Simulation06
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from JacobianTest
+[ RUN      ] JacobianTest.Simulation06
+/home/smita/workspace/Dandeliion-teams/dandeliion-core/tests/test_jacobian.cpp:193: Failure
+Expected equality of these values:
+  model.t.back()
+    Which is: 0.10000000000000001
+  60.0
+    Which is: 60
+The DAE solver stopped earlier
+[  FAILED  ] JacobianTest.Simulation06 (384 ms)
+[----------] 1 test from JacobianTest (384 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (384 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] JacobianTest.Simulation06
+
+ 1 FAILED TEST
+<end of output>
+Test time =   0.39 sec
+----------------------------------------------------------
+Test Failed.
+"JacobianTest.Simulation06" end time: Jun 26 22:37 BST
+"JacobianTest.Simulation06" time elapsed: 00:00:00
+----------------------------------------------------------
+
+24/39 Testing: SimpsonRuleTest.Function1
+24/39 Test: SimpsonRuleTest.Function1
+Command: "/home/smita/workspace/Dandeliion-teams/dandeliion-core/build/dandeliion-core-test" "--gtest_filter=SimpsonRuleTest.Function1" "--gtest_also_run_disabled_tests"
+Directory: /home/smita/workspace/Dandeliion-teams/dandeliion-core/build
+"SimpsonRuleTest.Function1" start time: Jun 26 22:37 BST
+Output:
+----------------------------------------------------------
+Running main() from /home/smita/workspace/Dandeliion-teams/dandeliion-core/googletest/googletest/src/gtest_main.cc
+Note: Google Test filter = SimpsonRuleTest.Function1
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SimpsonRuleTest
+[ RUN      ] SimpsonRuleTest.Function1
+[       OK ] SimpsonRuleTest.Function1 (0 ms)
+[----------] 1 test from SimpsonRuleTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"SimpsonRuleTest.Function1" end time: Jun 26 22:37 BST
+"SimpsonRuleTest.Function1" time elapsed: 00:00:00
+----------------------------------------------------------
+
+25/39 Testing: SimpsonRuleTest.Function2
+25/39 Test: SimpsonRuleTest.Function2
+Command: "/home/smita/workspace/Dandeliion-teams/dandeliion-core/build/dandeliion-core-test" "--gtest_filter=SimpsonRuleTest.Function2" "--gtest_also_run_disabled_tests"
+Directory: /home/smita/workspace/Dandeliion-teams/dandeliion-core/build
+"SimpsonRuleTest.Function2" start time: Jun 26 22:37 BST
+Output:
+----------------------------------------------------------
+Running main() from /home/smita/workspace/Dandeliion-teams/dandeliion-core/googletest/googletest/src/gtest_main.cc
+Note: Google Test filter = SimpsonRuleTest.Function2
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SimpsonRuleTest
+[ RUN      ] SimpsonRuleTest.Function2
+[       OK ] SimpsonRuleTest.Function2 (0 ms)
+[----------] 1 test from SimpsonRuleTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"SimpsonRuleTest.Function2" end time: Jun 26 22:37 BST
+"SimpsonRuleTest.Function2" time elapsed: 00:00:00
+----------------------------------------------------------
+
+26/39 Testing: SimpsonRuleTest.Function3
+26/39 Test: SimpsonRuleTest.Function3
+Command: "/home/smita/workspace/Dandeliion-teams/dandeliion-core/build/dandeliion-core-test" "--gtest_filter=SimpsonRuleTest.Function3" "--gtest_also_run_disabled_tests"
+Directory: /home/smita/workspace/Dandeliion-teams/dandeliion-core/build
+"SimpsonRuleTest.Function3" start time: Jun 26 22:37 BST
+Output:
+----------------------------------------------------------
+Running main() from /home/smita/workspace/Dandeliion-teams/dandeliion-core/googletest/googletest/src/gtest_main.cc
+Note: Google Test filter = SimpsonRuleTest.Function3
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SimpsonRuleTest
+[ RUN      ] SimpsonRuleTest.Function3
+[       OK ] SimpsonRuleTest.Function3 (0 ms)
+[----------] 1 test from SimpsonRuleTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"SimpsonRuleTest.Function3" end time: Jun 26 22:37 BST
+"SimpsonRuleTest.Function3" time elapsed: 00:00:00
+----------------------------------------------------------
+
+27/39 Testing: SimpsonRuleTest.Function4
+27/39 Test: SimpsonRuleTest.Function4
+Command: "/home/smita/workspace/Dandeliion-teams/dandeliion-core/build/dandeliion-core-test" "--gtest_filter=SimpsonRuleTest.Function4" "--gtest_also_run_disabled_tests"
+Directory: /home/smita/workspace/Dandeliion-teams/dandeliion-core/build
+"SimpsonRuleTest.Function4" start time: Jun 26 22:37 BST
+Output:
+----------------------------------------------------------
+Running main() from /home/smita/workspace/Dandeliion-teams/dandeliion-core/googletest/googletest/src/gtest_main.cc
+Note: Google Test filter = SimpsonRuleTest.Function4
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SimpsonRuleTest
+[ RUN      ] SimpsonRuleTest.Function4
+[       OK ] SimpsonRuleTest.Function4 (0 ms)
+[----------] 1 test from SimpsonRuleTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"SimpsonRuleTest.Function4" end time: Jun 26 22:37 BST
+"SimpsonRuleTest.Function4" time elapsed: 00:00:00
+----------------------------------------------------------
+
+28/39 Testing: SimpsonRuleTest.Convergence
+28/39 Test: SimpsonRuleTest.Convergence
+Command: "/home/smita/workspace/Dandeliion-teams/dandeliion-core/build/dandeliion-core-test" "--gtest_filter=SimpsonRuleTest.Convergence" "--gtest_also_run_disabled_tests"
+Directory: /home/smita/workspace/Dandeliion-teams/dandeliion-core/build
+"SimpsonRuleTest.Convergence" start time: Jun 26 22:37 BST
+Output:
+----------------------------------------------------------
+Running main() from /home/smita/workspace/Dandeliion-teams/dandeliion-core/googletest/googletest/src/gtest_main.cc
+Note: Google Test filter = SimpsonRuleTest.Convergence
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SimpsonRuleTest
+[ RUN      ] SimpsonRuleTest.Convergence
+[       OK ] SimpsonRuleTest.Convergence (0 ms)
+[----------] 1 test from SimpsonRuleTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"SimpsonRuleTest.Convergence" end time: Jun 26 22:37 BST
+"SimpsonRuleTest.Convergence" time elapsed: 00:00:00
+----------------------------------------------------------
+
+29/39 Testing: VoltageTest.Simulation01
+29/39 Test: VoltageTest.Simulation01
+Command: "/home/smita/workspace/Dandeliion-teams/dandeliion-core/build/dandeliion-core-test" "--gtest_filter=VoltageTest.Simulation01" "--gtest_also_run_disabled_tests"
+Directory: /home/smita/workspace/Dandeliion-teams/dandeliion-core/build
+"VoltageTest.Simulation01" start time: Jun 26 22:37 BST
+Output:
+----------------------------------------------------------
+Running main() from /home/smita/workspace/Dandeliion-teams/dandeliion-core/googletest/googletest/src/gtest_main.cc
+Note: Google Test filter = VoltageTest.Simulation01
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from VoltageTest
+[ RUN      ] VoltageTest.Simulation01
+/home/smita/workspace/Dandeliion-teams/dandeliion-core/tests/test_solution.cpp:32: Failure
+Expected equality of these values:
+  model.t.back()
+    Which is: 0.10000000000000001
+  t_ref
+    Which is: 3750
+The DAE solver stopped earlier
+[  FAILED  ] VoltageTest.Simulation01 (390 ms)
+[----------] 1 test from VoltageTest (390 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (390 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] VoltageTest.Simulation01
+
+ 1 FAILED TEST
+<end of output>
+Test time =   0.39 sec
+----------------------------------------------------------
+Test Failed.
+"VoltageTest.Simulation01" end time: Jun 26 22:37 BST
+"VoltageTest.Simulation01" time elapsed: 00:00:00
+----------------------------------------------------------
+
+30/39 Testing: VoltageTest.Simulation02
+30/39 Test: VoltageTest.Simulation02
+Command: "/home/smita/workspace/Dandeliion-teams/dandeliion-core/build/dandeliion-core-test" "--gtest_filter=VoltageTest.Simulation02" "--gtest_also_run_disabled_tests"
+Directory: /home/smita/workspace/Dandeliion-teams/dandeliion-core/build
+"VoltageTest.Simulation02" start time: Jun 26 22:37 BST
+Output:
+----------------------------------------------------------
+Running main() from /home/smita/workspace/Dandeliion-teams/dandeliion-core/googletest/googletest/src/gtest_main.cc
+Note: Google Test filter = VoltageTest.Simulation02
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from VoltageTest
+[ RUN      ] VoltageTest.Simulation02
+/home/smita/workspace/Dandeliion-teams/dandeliion-core/tests/test_solution.cpp:58: Failure
+Expected equality of these values:
+  model.t.back()
+    Which is: 0.10000000000000001
+  t_ref
+    Which is: 3750
+The DAE solver stopped earlier
+[  FAILED  ] VoltageTest.Simulation02 (319 ms)
+[----------] 1 test from VoltageTest (319 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (319 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] VoltageTest.Simulation02
+
+ 1 FAILED TEST
+<end of output>
+Test time =   0.32 sec
+----------------------------------------------------------
+Test Failed.
+"VoltageTest.Simulation02" end time: Jun 26 22:37 BST
+"VoltageTest.Simulation02" time elapsed: 00:00:00
+----------------------------------------------------------
+
+31/39 Testing: VoltageTest.Simulation03
+31/39 Test: VoltageTest.Simulation03
+Command: "/home/smita/workspace/Dandeliion-teams/dandeliion-core/build/dandeliion-core-test" "--gtest_filter=VoltageTest.Simulation03" "--gtest_also_run_disabled_tests"
+Directory: /home/smita/workspace/Dandeliion-teams/dandeliion-core/build
+"VoltageTest.Simulation03" start time: Jun 26 22:37 BST
+Output:
+----------------------------------------------------------
+Running main() from /home/smita/workspace/Dandeliion-teams/dandeliion-core/googletest/googletest/src/gtest_main.cc
+Note: Google Test filter = VoltageTest.Simulation03
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from VoltageTest
+[ RUN      ] VoltageTest.Simulation03
+
+ERROR: The time step was reduced to 6.10352e-06 but the scheme failed to converge
+/home/smita/workspace/Dandeliion-teams/dandeliion-core/tests/test_solution.cpp:78: Failure
+Expected equality of these values:
+  status
+    Which is: 3
+  0
+The DAE solver returned error
+[  FAILED  ] VoltageTest.Simulation03 (2579 ms)
+[----------] 1 test from VoltageTest (2579 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (2579 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] VoltageTest.Simulation03
+
+ 1 FAILED TEST
+<end of output>
+Test time =   2.59 sec
+----------------------------------------------------------
+Test Failed.
+"VoltageTest.Simulation03" end time: Jun 26 22:37 BST
+"VoltageTest.Simulation03" time elapsed: 00:00:02
+----------------------------------------------------------
+
+32/39 Testing: VoltageTest.Simulation04
+32/39 Test: VoltageTest.Simulation04
+Command: "/home/smita/workspace/Dandeliion-teams/dandeliion-core/build/dandeliion-core-test" "--gtest_filter=VoltageTest.Simulation04" "--gtest_also_run_disabled_tests"
+Directory: /home/smita/workspace/Dandeliion-teams/dandeliion-core/build
+"VoltageTest.Simulation04" start time: Jun 26 22:37 BST
+Output:
+----------------------------------------------------------
+Running main() from /home/smita/workspace/Dandeliion-teams/dandeliion-core/googletest/googletest/src/gtest_main.cc
+Note: Google Test filter = VoltageTest.Simulation04
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from VoltageTest
+[ RUN      ] VoltageTest.Simulation04
+
+ERROR: The time step was reduced to 6.10352e-06 but the scheme failed to converge
+/home/smita/workspace/Dandeliion-teams/dandeliion-core/tests/test_solution.cpp:104: Failure
+Expected equality of these values:
+  status
+    Which is: 3
+  0
+The DAE solver returned error
+[  FAILED  ] VoltageTest.Simulation04 (2358 ms)
+[----------] 1 test from VoltageTest (2358 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (2358 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] VoltageTest.Simulation04
+
+ 1 FAILED TEST
+<end of output>
+Test time =   2.36 sec
+----------------------------------------------------------
+Test Failed.
+"VoltageTest.Simulation04" end time: Jun 26 22:37 BST
+"VoltageTest.Simulation04" time elapsed: 00:00:02
+----------------------------------------------------------
+
+33/39 Testing: VoltageTest.Simulation05
+33/39 Test: VoltageTest.Simulation05
+Command: "/home/smita/workspace/Dandeliion-teams/dandeliion-core/build/dandeliion-core-test" "--gtest_filter=VoltageTest.Simulation05" "--gtest_also_run_disabled_tests"
+Directory: /home/smita/workspace/Dandeliion-teams/dandeliion-core/build
+"VoltageTest.Simulation05" start time: Jun 26 22:37 BST
+Output:
+----------------------------------------------------------
+Running main() from /home/smita/workspace/Dandeliion-teams/dandeliion-core/googletest/googletest/src/gtest_main.cc
+Note: Google Test filter = VoltageTest.Simulation05
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from VoltageTest
+[ RUN      ] VoltageTest.Simulation05
+/home/smita/workspace/Dandeliion-teams/dandeliion-core/tests/test_solution.cpp:131: Failure
+Expected equality of these values:
+  model.t.back()
+    Which is: 0.10000000000000001
+  t_ref
+    Which is: 3750
+The DAE solver stopped earlier
+[  FAILED  ] VoltageTest.Simulation05 (183 ms)
+[----------] 1 test from VoltageTest (183 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (183 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] VoltageTest.Simulation05
+
+ 1 FAILED TEST
+<end of output>
+Test time =   0.19 sec
+----------------------------------------------------------
+Test Failed.
+"VoltageTest.Simulation05" end time: Jun 26 22:37 BST
+"VoltageTest.Simulation05" time elapsed: 00:00:00
+----------------------------------------------------------
+
+34/39 Testing: VoltageTest.Simulation06
+34/39 Test: VoltageTest.Simulation06
+Command: "/home/smita/workspace/Dandeliion-teams/dandeliion-core/build/dandeliion-core-test" "--gtest_filter=VoltageTest.Simulation06" "--gtest_also_run_disabled_tests"
+Directory: /home/smita/workspace/Dandeliion-teams/dandeliion-core/build
+"VoltageTest.Simulation06" start time: Jun 26 22:37 BST
+Output:
+----------------------------------------------------------
+Running main() from /home/smita/workspace/Dandeliion-teams/dandeliion-core/googletest/googletest/src/gtest_main.cc
+Note: Google Test filter = VoltageTest.Simulation06
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from VoltageTest
+[ RUN      ] VoltageTest.Simulation06
+/home/smita/workspace/Dandeliion-teams/dandeliion-core/tests/test_solution.cpp:158: Failure
+Expected equality of these values:
+  model.t.back()
+    Which is: 0.10000000000000001
+  t_ref
+    Which is: 3750
+The DAE solver stopped earlier
+[  FAILED  ] VoltageTest.Simulation06 (214 ms)
+[----------] 1 test from VoltageTest (214 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (214 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] VoltageTest.Simulation06
+
+ 1 FAILED TEST
+<end of output>
+Test time =   0.22 sec
+----------------------------------------------------------
+Test Failed.
+"VoltageTest.Simulation06" end time: Jun 26 22:37 BST
+"VoltageTest.Simulation06" time elapsed: 00:00:00
+----------------------------------------------------------
+
+35/39 Testing: VoltageTest.Simulation07
+35/39 Test: VoltageTest.Simulation07
+Command: "/home/smita/workspace/Dandeliion-teams/dandeliion-core/build/dandeliion-core-test" "--gtest_filter=VoltageTest.Simulation07" "--gtest_also_run_disabled_tests"
+Directory: /home/smita/workspace/Dandeliion-teams/dandeliion-core/build
+"VoltageTest.Simulation07" start time: Jun 26 22:37 BST
+Output:
+----------------------------------------------------------
+Running main() from /home/smita/workspace/Dandeliion-teams/dandeliion-core/googletest/googletest/src/gtest_main.cc
+Note: Google Test filter = VoltageTest.Simulation07
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from VoltageTest
+[ RUN      ] VoltageTest.Simulation07
+/home/smita/workspace/Dandeliion-teams/dandeliion-core/tests/test_solution.cpp:185: Failure
+Expected equality of these values:
+  model.t.back()
+    Which is: 0.10000000000000001
+  t_ref
+    Which is: 3750
+The DAE solver stopped earlier
+[  FAILED  ] VoltageTest.Simulation07 (145 ms)
+[----------] 1 test from VoltageTest (145 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (145 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] VoltageTest.Simulation07
+
+ 1 FAILED TEST
+<end of output>
+Test time =   0.15 sec
+----------------------------------------------------------
+Test Failed.
+"VoltageTest.Simulation07" end time: Jun 26 22:37 BST
+"VoltageTest.Simulation07" time elapsed: 00:00:00
+----------------------------------------------------------
+
+36/39 Testing: VoltageTest.Simulation08
+36/39 Test: VoltageTest.Simulation08
+Command: "/home/smita/workspace/Dandeliion-teams/dandeliion-core/build/dandeliion-core-test" "--gtest_filter=VoltageTest.Simulation08" "--gtest_also_run_disabled_tests"
+Directory: /home/smita/workspace/Dandeliion-teams/dandeliion-core/build
+"VoltageTest.Simulation08" start time: Jun 26 22:37 BST
+Output:
+----------------------------------------------------------
+Running main() from /home/smita/workspace/Dandeliion-teams/dandeliion-core/googletest/googletest/src/gtest_main.cc
+Note: Google Test filter = VoltageTest.Simulation08
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from VoltageTest
+[ RUN      ] VoltageTest.Simulation08
+/home/smita/workspace/Dandeliion-teams/dandeliion-core/tests/test_solution.cpp:212: Failure
+Expected equality of these values:
+  model.t.back()
+    Which is: 0.10000000000000001
+  t_ref
+    Which is: 3750
+The DAE solver stopped earlier
+[  FAILED  ] VoltageTest.Simulation08 (156 ms)
+[----------] 1 test from VoltageTest (156 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (156 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] VoltageTest.Simulation08
+
+ 1 FAILED TEST
+<end of output>
+Test time =   0.16 sec
+----------------------------------------------------------
+Test Failed.
+"VoltageTest.Simulation08" end time: Jun 26 22:37 BST
+"VoltageTest.Simulation08" time elapsed: 00:00:00
+----------------------------------------------------------
+
+37/39 Testing: VoltageTest.Simulation09
+37/39 Test: VoltageTest.Simulation09
+Command: "/home/smita/workspace/Dandeliion-teams/dandeliion-core/build/dandeliion-core-test" "--gtest_filter=VoltageTest.Simulation09" "--gtest_also_run_disabled_tests"
+Directory: /home/smita/workspace/Dandeliion-teams/dandeliion-core/build
+"VoltageTest.Simulation09" start time: Jun 26 22:37 BST
+Output:
+----------------------------------------------------------
+Running main() from /home/smita/workspace/Dandeliion-teams/dandeliion-core/googletest/googletest/src/gtest_main.cc
+Note: Google Test filter = VoltageTest.Simulation09
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from VoltageTest
+[ RUN      ] VoltageTest.Simulation09
+/home/smita/workspace/Dandeliion-teams/dandeliion-core/tests/test_solution.cpp:239: Failure
+Expected equality of these values:
+  model.t.back()
+    Which is: 0.10000000000000001
+  t_ref
+    Which is: 3750
+The DAE solver stopped earlier
+[  FAILED  ] VoltageTest.Simulation09 (187 ms)
+[----------] 1 test from VoltageTest (187 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (187 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] VoltageTest.Simulation09
+
+ 1 FAILED TEST
+<end of output>
+Test time =   0.19 sec
+----------------------------------------------------------
+Test Failed.
+"VoltageTest.Simulation09" end time: Jun 26 22:37 BST
+"VoltageTest.Simulation09" time elapsed: 00:00:00
+----------------------------------------------------------
+
+38/39 Testing: VoltageTest.Simulation10
+38/39 Test: VoltageTest.Simulation10
+Command: "/home/smita/workspace/Dandeliion-teams/dandeliion-core/build/dandeliion-core-test" "--gtest_filter=VoltageTest.Simulation10" "--gtest_also_run_disabled_tests"
+Directory: /home/smita/workspace/Dandeliion-teams/dandeliion-core/build
+"VoltageTest.Simulation10" start time: Jun 26 22:37 BST
+Output:
+----------------------------------------------------------
+Running main() from /home/smita/workspace/Dandeliion-teams/dandeliion-core/googletest/googletest/src/gtest_main.cc
+Note: Google Test filter = VoltageTest.Simulation10
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from VoltageTest
+[ RUN      ] VoltageTest.Simulation10
+/home/smita/workspace/Dandeliion-teams/dandeliion-core/tests/test_solution.cpp:266: Failure
+Expected equality of these values:
+  model.t.back()
+    Which is: 0.10000000000000001
+  t_ref
+    Which is: 3750
+The DAE solver stopped earlier
+[  FAILED  ] VoltageTest.Simulation10 (173 ms)
+[----------] 1 test from VoltageTest (173 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (173 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] VoltageTest.Simulation10
+
+ 1 FAILED TEST
+<end of output>
+Test time =   0.18 sec
+----------------------------------------------------------
+Test Failed.
+"VoltageTest.Simulation10" end time: Jun 26 22:37 BST
+"VoltageTest.Simulation10" time elapsed: 00:00:00
+----------------------------------------------------------
+
+39/39 Testing: VoltageTest.Simulation11
+39/39 Test: VoltageTest.Simulation11
+Command: "/home/smita/workspace/Dandeliion-teams/dandeliion-core/build/dandeliion-core-test" "--gtest_filter=VoltageTest.Simulation11" "--gtest_also_run_disabled_tests"
+Directory: /home/smita/workspace/Dandeliion-teams/dandeliion-core/build
+"VoltageTest.Simulation11" start time: Jun 26 22:37 BST
+Output:
+----------------------------------------------------------
+Running main() from /home/smita/workspace/Dandeliion-teams/dandeliion-core/googletest/googletest/src/gtest_main.cc
+Note: Google Test filter = VoltageTest.Simulation11
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from VoltageTest
+[ RUN      ] VoltageTest.Simulation11
+/home/smita/workspace/Dandeliion-teams/dandeliion-core/tests/test_solution.cpp:296: Failure
+Expected equality of these values:
+  model1.t.back()
+    Which is: 0.10000000000000001
+  t_ref
+    Which is: 3750
+The DAE solver stopped earlier
+[  FAILED  ] VoltageTest.Simulation11 (292 ms)
+[----------] 1 test from VoltageTest (292 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (292 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] VoltageTest.Simulation11
+
+ 1 FAILED TEST
+<end of output>
+Test time =   0.30 sec
+----------------------------------------------------------
+Test Failed.
+"VoltageTest.Simulation11" end time: Jun 26 22:37 BST
+"VoltageTest.Simulation11" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Jun 26 22:37 BST

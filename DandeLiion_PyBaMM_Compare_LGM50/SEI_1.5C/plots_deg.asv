@@ -1,0 +1,140 @@
+clear 
+close all
+format long
+
+%**************************************************************************
+%============================ Loading DandeLiion data =====================
+%**************************************************************************
+
+% Porosity
+porosity_D125e20_dande = importdata( 'buildD1.25e-20/porosity_liquid.dat');
+porosity_D75e21_dande = importdata( 'buildD7.5e-21/porosity_liquid.dat');
+porosity_D25e21_dande = importdata( 'buildD25e-21/porosity_liquid.dat');
+porosity_D25e22_dande = importdata( 'buildD25e-22/porosity_liquid.dat');
+% SEI thickness
+LSEI_D125e20_dande = importdata( 'buildD1.25e-20/SEI_thickness.dat');
+LSEI_D75e21_dande = importdata( 'buildD7.5e-21/SEI_thickness.dat');
+LSEI_D25e21_dande = importdata( 'buildD25e-21/SEI_thickness.dat');
+LSEI_D25e22_dande = importdata( 'buildD25e-22/SEI_thickness.dat');
+
+% Total capacity
+cap_D125e20_dande = importdata( 'buildD1.25e-20/capacity.dat');
+cap_D75e21_dande = importdata( 'buildD7.5e-21/capacity.dat');
+cap_D25e21_dande = importdata( 'buildD25e-21/capacity.dat');
+cap_D25e22_dande = importdata( 'buildD25e-22/capacity.dat');
+
+
+time = [0, 1000, 2000, 3620];
+%**************************************************************************
+%============================ Loading pybamm data =========================
+%**************************************************************************
+
+% Porosity
+p_D25e22  = importdata("porosity_D2.5e-22.csv");
+p_D25e21  = importdata("porosity_D2.5e-21.csv");
+p_D75e21  = importdata("porosity_D7.5e-21.csv");
+p_D125e20 = importdata("porosity_D1.25e-20.csv");
+
+% SEI thickness
+LSEI_D25e22  = importdata("LSEI_D2.5e-22.csv");
+LSEI_D25e21  = importdata("LSEI_D2.5e-21.csv");
+LSEI_D75e21  = importdata("LSEI_D7.5e-21.csv");
+LSEI_D125e20 = importdata("LSEI_D1.25e-20.csv");
+
+% Time [min]	Current [A]	Terminal voltage [V]	Discharge capacity [A.h]	Loss of capacity to SEI [A.h]	Negative electrode capacity [A.h]	Positive electrode capacity [A.h]	Throughput capacity [A.h]	Total capacity lost to side reactions [A.h]	Total lithium capacity [A.h]	Loss of lithium to SEI [mol]	Total lithium in negative electrode [mol]	Total lithium in positive electrode [mol]	Loss of lithium inventory [%]	Loss of active material in negative electrode [%]
+SEI_D25e22 =importdata("SEI_D2.5e-22.csv");
+SEI_D25e21 =importdata("SEI_D2.5e-21.csv");
+SEI_D75e21 =importdata("SEI_D7.5e-21.csv");
+SEI_D125e20 =importdata("SEI_D1.25e-20.csv");
+
+% plots porosity
+figure('Name','Porosity')
+ploot(time, porosity_D25e22_dande.data(1,2:end),'*b','', 'Time [Min]','')
+ploot(time, porosity_D25e21_dande.data(1,2:end),'*r','', 'Time [Min]','')
+ploot(time, porosity_D75e21_dande.data(1,2:end),'*m','', 'Time [Min]','')
+ploot(time, porosity_D125e20_dande.data(1,2:end),'*k','', 'Time [Min]','')
+
+
+ploot(SEI_D25e22.data(:,1)*60, p_D25e22(1,:),'b','', 'Time [Min]','')
+ploot(SEI_D25e21.data(:,1)*60, p_D25e21(1,:),'r','', 'Time [Min]','')
+ploot(SEI_D75e21.data(:,1)*60, p_D75e21(1,:),'m','', 'Time [Min]','')
+ploot(SEI_D125e20.data(:,1)*60, p_D125e20(1,:),'k','', 'Time [Min]','')
+legend('DandeLiion: D25e22', 'DandeLiion: D25e21','DandeLiion: D75e21','DandeLiion: D125e20','Pybamm D25e22','Pybamm D25e21','Pybamm D75e21','Pybamm D125e20')
+
+
+
+% plots SEI Thickness
+figure('Name','SEI Thickness')
+ploot(time, LSEI_D25e22_dande.data(1,2:end),'*b','', 'Time [Min]','')
+ploot(time, LSEI_D25e21_dande.data(1,2:end),'*r','', 'Time [Min]','')
+ploot(time, LSEI_D75e21_dande.data(1,2:end),'*m','', 'Time [Min]','')
+ploot(time, LSEI_D125e20_dande.data(1,2:end),'*k','', 'Time [Min]','')
+
+
+ploot(SEI_D25e22.data(:,1)*60, LSEI_D25e22(1,:),'b','', 'Time [Min]','')
+ploot(SEI_D25e21.data(:,1)*60, LSEI_D25e21(1,:),'r','', 'Time [Min]','')
+ploot(SEI_D75e21.data(:,1)*60, LSEI_D75e21(1,:),'m','', 'Time [Min]','')
+ploot(SEI_D125e20.data(:,1)*60, LSEI_D125e20(1,:),'k','', 'Time [Min]','')
+legend('DandeLiion: D25e22', 'DandeLiion: D25e21','DandeLiion: D75e21','DandeLiion: D125e20','Pybamm D25e22','Pybamm D25e21','Pybamm D75e21','Pybamm D125e20')
+
+
+figure('Name','Capacity')
+ploot(cap_D25e22_dande.data(:,1),cap_D25e22_dande.data(:,2),'*b','', 'Time [s]','SEI thickness [m]')
+ploot(cap_D25e21_dande.data(:,1),cap_D125e20_dande.data(:,2),'*r','', 'Time [s]','SEI thickness [m]')
+ploot(cap_D75e20_dande.data(:,1),cap_D125e20_dande.data(:,2),'*m','', 'Time [s]','SEI thickness [m]')
+ploot(cap_D125e20_dande.data(:,1),cap_D125e20_dande.data(:,2),'*k','', 'Time [s]','SEI thickness [m]')
+
+
+
+
+return 
+Data1=importdata("SEI_D2.5e-22.csv");
+Data=Data1.data;
+time_data=Data(:,1)*60; %units: seconds
+Voltage_data=Data(:,3) ; % units: Volts
+Current_data=Data(:,2) ; %units: Amps
+vd = importdata('total_voltage2.5e22.dat');
+id = importdata('total_current_estimated2.5e22.dat');
+L_D25e22_py =importdata("L_D2.5e-22.csv");
+L_D25e22_dande =importdata("SEI_thickness.dat");
+p_D25e22_py =importdata("porosity_D2.5e-22.csv");
+p_D25e22_dande =importdata("porosity_liquid.dat");
+cap_dande =importdata("capacity.dat");
+
+figure('name','dsol2.5e22')
+title('Dsol = 2.5e-22 & 1C c-rate')
+subplot(1,2,1)
+colororder({'b','m'})
+yyaxis left
+ploot(time_data, Voltage_data,'k','CV: Hold 4.2V and 4 hours rest', 'Time [Min]','Voltage [V]')
+hold on
+ploot(vd.data(:,1), vd.data(:,2),'r','', 'Time [s]','Voltage [V]')
+hold on 
+yyaxis right
+ploot(time_data, Current_data,'k','', 'Time [s]','Voltage [V]')
+hold on 
+ploot(id.data(:,1),- id.data(:,2),'m',' ', 'Time [s]','Current [A]')
+hold on 
+legend('PyBaMM', 'Deg ctol')
+subplot(1,2,2)
+time = [0, 1000, 2000, 3620];
+ploot(time_data, L_D25e22_py(end,:),'k','', 'Time [Min]','')
+hold on  
+ploot(time, L_D25e22_dande.data(1,2:end),'*r','', 'Time [s]','SEI thickness [m]')
+legend('PyBaMM', 'Deg ctol')
+
+figure('Name','porosity')
+subplot(1,2,1)
+time = [0, 1000, 2000, 3620];
+ploot(time_data, p_D25e22_py.data,'k','', 'Time [Min]','')
+hold on  
+ploot(time, p_D25e22_dande.data(1,2:end),'r','', 'Time [s]','Porosity')
+legend('PyBaMM', 'Deg ctol')
+
+subplot(1,2,2)
+time = [0, 1000, 2000, 3620];
+ploot(time_data, Data1.data(:,8),'k','', 'Time [Min]','')
+hold on  
+ploot(vd.data(:,1),cap_dande.data(:,2),'*r','', 'Time [s]','SEI thickness [m]')
+legend('PyBaMM', 'Deg ctol')
+

@@ -1,0 +1,183 @@
+import pybamm
+import os
+import numpy as np
+import matplotlib.pyplot as plt
+
+
+model = pybamm.BaseModel()
+
+c = pybamm.Variable("Concentration", domain = "negatve particle")
+c0 = pybamm.Parameter("Initial concentrtaion")
+j0 = pybamm.Parameter("Flux parameter")
+
+N = -pybamm.grad(c)
+dcdt = -pybamm.div(N)
+model.rhs = {c: dcdt}
+
+c_surf = pybamm.surf(c)
+j = j0 * (1 - c_surf) ** (1/2)* c_surf ** (1/2)
+model.boundary_conditions = {c: {"left": (0, "Neumann"), "right": (-j, "Neumann")}}
+model.initial_conditions = {c: c0}
+model.variables = {
+    "Concentration":c,
+    "Surface concnetrtaion": c_surf,
+    "Flux": N,
+    "Boundry flux": j,
+}
+
+r = pybamm.SpatialVariable("r", domain = ["negative particle"], coord_sys= "spherical ploar")
+geometry = {"negative particle": {r:{"min": 0, "max": 1}}}
+spatial_methods = {"negatice particle": pybamm.FiniteVolume()}
+submesh_type = {"negative oartcile": pybamm.Uniform1DSubMesh}
+var_pts = {r: 20}
+parameter_values = pybamm.ParameterValues({
+    "Initial concentration": 0.9,
+    "Flux parameter": 0.8,
+})
+solver = pybamm.ScipySolver()
+sim = pybamm.Simulation(
+        model,
+        geometry=geometry,
+        parameter_values=parameter_values,
+        submesh_types=submesh_type,
+        var_pts=var_pts,
+        spatial_methods=spatial_methods,
+        solver=solver,
+)
+sim.solve([0, 1])  # solve up to a dimensionless time of 1
+sim.plot(["Concentration", "Surface concentration", "Flux", "Boundary flux"])  # # sim = pybamm.Simulation(model)
+# # sim.solve([0,3600])
+# # sim.plot()
+# # models = [
+# # #     pybamm.lithium_ion.SPM(),
+# # #     pybamm.lithium_ion.SPMe(),
+# # #     pybamm.lithium_ion.DFN()    
+# # # ]
+# # # sims = []
+# # # for model in models:
+# # #     sim = pybamm.Simulation(model)
+# # #     sim.solve([0,3600])
+# # #     sims.append(sim) 
+# # # pybamm.dynamic_plot(sims, time_unit = "seconds")
+# # model_dfn = pybamm.lithium_ion.DFN()
+# # sim_dfn = pybamm.Simulation(model_dfn)
+# # sim_dfn.solve([0, 3600])
+# # # # print(model_dfn.variable_names()    )
+# # # model_dfn.variables.search("electrolyte")
+# # # output_variables = ["Terminal voltage [V]","Electrolyte potential [V]"]
+# # # sim_dfn.plot(output_variables=output_variables)
+# # # pybamm.plot_voltage_components(sim_dfn.solution)
+
+# # model_spm = pybamm.lithium_ion.SPM()
+# # sim_spm = pybamm.Simulation(model_spm)
+# # sim_spm.solve([0, 3600])
+
+# # # fig, axes = plt.subplots(1, 2, figsize=(15, 6), sharey=True)
+# # # pybamm.plot_voltage_components(sim_spm.solution, ax = axes.flat[0])
+# # # pybamm.plot_voltage_components(sim_dfn.solution, ax = axes.flat[1])
+
+# # # axes.flat[0].set_title("DFN")
+# # # axes.flat[1].set_title("SPM")
+# # # plt.show()
+# # parameter_values = pybamm.ParameterValues("Chen2020")
+# # # parameter_values["Current function [A]"] = 10
+# # # parameter_values.search("electrolyte")
+# # model = pybamm.lithium_ion.DFN()
+# # # sim = pybamm.Simulation(model,parameter_values= parameter_values)
+# # # sim.solve([0, 3600])
+# # # sim.plot()
+
+# # import pandas as pd
+# # drive_cycle = pd.read_csv("pybamm/input/drive_cycles/US06.csv", comment="#", header=None).to_numpy()
+
+
+# # timescale = parameter_values.evaluate(model.timescale)
+# # current_interpolant = pybamm.Interpolant(drive_cycle[:, 0], drive_cycle[:, 1], timescale * pybamm.t)
+
+# # # Set drive cycle
+# # parameter_values["Current function [A]"] = current_interpolant
+# # parameter_values.search("electrolyte")
+# # model = pybamm.lithium_ion.DFN()
+# # # sim = pybamm.Simulation(model,parameter_values= parameter_values)
+# # sim.solve()
+# # sim.plot()
+
+# # experiment = pybamm.Experiment(
+# #     [
+# #         ("Discharge at C/10 for 10 hours or until 3.3 V",
+# #         "Rest for 1 hour",
+# #         "Charge at 1 A until 4.1 V",
+# #         "Hold at 4.1 V until 50 mA",
+# #         "Rest for 1 hour"),
+# #     ]*3
+# # )
+# # sim = pybamm.Simulation(model, experiment=experiment)
+# # sim.solve()
+# # sim.plot()
+# # [("Discharge at 1C for 0.5 hours", "Discharge at C/20 for 0.5 hours")] * 3 + [("Charge at 0.5 C for 45 minutes",)]
+
+# # options = {"thermal": "x-full"}
+# # model = pybamm.lithium_ion.SPMe(options=options) # loading in options
+
+# # parameter_values = model.default_parameter_values
+# # parameter_values["Current function [A]"] = 3
+
+# # sim = pybamm.Simulation(model, parameter_values=parameter_values)
+# # sim.solve([0, 3600])
+# # sim.plot()
+# # sim.plot(["Cell temperature [K]", "Total heating [W.m-3]", "Current [A]", "Terminal voltage [V]"])
+
+# # model = pybamm.lithium_ion.DFN()
+# # param = model.default_parameter_values
+# # param["Lower voltage cut-off [V]"] = 3.4
+
+# # safe_solver = pybamm.CasadiSolver(atol = 1e-3, rtol = 1e-3, mode="safe")
+# # fast_solver = pybamm.CasadiSolver(atol = 1e-3, rtol = 1e-3, mode="fast")
+# # safe_sim = pybamm.Simulation(model,parameter_values=param, solver=safe_solver)
+# # fast_sim = pybamm.Simulation(model,parameter_values=param, solver=fast_solver)
+
+# # safe_sim.solve([0,3600])
+# # print("Safe mode solve time: {}".format(safe_sim.solution.solve_time))
+
+
+# # fast_sim.solve([0,3600])
+# # print("Safe mode solve time: {}".format(fast_sim.solution.solve_time))
+# # pybamm.dynamic_plot([safe_sim, fast_sim])
+
+# model = pybamm.lithium_ion.SPMe()
+# # print(model.default_var_pts)
+# var_pts = {
+#     "x_n": 10,
+#     "x_s": 10,
+#     "x_p": 10,
+#     "r_n": 10,
+#     "r_p": 10,
+# }
+
+# sim = pybamm.Simulation(model, var_pts = var_pts)
+
+# # sim.solve([0, 3600])
+# # sim.plot()
+
+# npts = [4,8,16,32,64]
+# model = pybamm.lithium_ion.DFN()
+# parameter_values = pybamm.ParameterValues("Ecker2015")
+
+# solver = pybamm.CasadiSolver(mode = "fast")
+
+# solutions = []
+# for N in npts:
+#     var_pts = {
+#         "x_n": N,
+#         "x_s": N,
+#         "x_p": N,
+#         "r_n": N,
+#         "r_p": N,
+#     }
+# sim = pybamm.Simulation(
+#     model, solver = solver , parameter_values=parameter_values, var_pts=var_pts
+# )    
+# sim.solve([0,3600])
+# solutions.append(sim.solution)
+# parameter_values = pybamm.ParameterValues("Ecker2015")
+# pybamm.dynamic_plot(solutions, ["Terminal voltage [V]"], time_unit="seconds", labels=npts)    

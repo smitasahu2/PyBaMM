@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="Linux-g++-9"
+	BuildStamp="20230711-0907-Experimental"
+	Name="smita-Precision-3580"
+	Generator="ctest-3.22.1"
+	CompilerName="/usr/bin/g++-9"
+	CompilerVersion="9.5.0"
+	OSName="Linux"
+	Hostname="smita-Precision-3580"
+	OSRelease="6.1.0-1014-oem"
+	OSVersion="#14-Ubuntu SMP PREEMPT_DYNAMIC Fri May 19 06:02:46 UTC 2023"
+	OSPlatform="x86_64"
+	Is64Bits="1"
+	VendorString="GenuineIntel"
+	VendorID="Intel Corporation"
+	FamilyID="6"
+	ModelID="186"
+	ProcessorCacheSize="24576"
+	NumberOfLogicalCPU="20"
+	NumberOfPhysicalCPU="14"
+	TotalVirtualMemory="2047"
+	TotalPhysicalMemory="31776"
+	LogicalProcessorsPerPhysical="1"
+	ProcessorClockFrequency="4380.82"
+	>
+	<Testing>
+		<StartDateTime>Jul 11 12:53 BST</StartDateTime>
+		<StartTestTime>1689076395</StartTestTime>
+		<TestList/>
+		<EndDateTime>Jul 11 12:53 BST</EndDateTime>
+		<EndTestTime>1689076395</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>
